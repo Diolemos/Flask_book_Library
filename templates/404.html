@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={{ url_for('static',filename="styles.css")}}>
+    <style>
+        body{
+            background-color: black;
+            color: #f7f7f7;
+           
+        }
+        h1{
+            color: red;
+        }
+        img{
+                width: 400px;
+                height: auto;
+                border : 1px solid #999;
+            }
+    </style>
+</head>
+<body >
+    
+<h1>404:</h1>
+<h2>The thing...</h2>
+<h2>The thing you're looking for...</h2>
+<h2>Is not found</h2>
+<img src={{ url_for('static', filename="/images/joe404.gif") }} alt="/joe404.gif">
+
+</body>
+</html>
