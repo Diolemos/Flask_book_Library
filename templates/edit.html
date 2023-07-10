@@ -1,0 +1,18 @@
+{% extends 'base.html'  %}
+
+{% block title %}
+Edit Book
+{% endblock %}
+
+
+{%block content %}
+<form action="{{ url_for('edit') }}" method="POST">
+    <p>Book Name: {{book.title}}</p>
+    <p>Current Rating {{book.rating}}</p>
+     <input hidden="hidden" name="id" value="{{book.id}}">
+     <!-- TODO SET FORM VALIDATION IN SCRIPT.JS AND SERVER.PY -->
+    <input name="rating" type="text" placeholder="New Rating">
+    <button type="submit">Change Rating</button>
+</form>
+
+{% endblock %}
