@@ -21,7 +21,7 @@ with app.app_context():
     
 @app.route('/')
 def home():
-    return '<h1>Welcome</h1>'    
+    return render_template('index.html')   
 
 
 if __name__ == "__main__":
