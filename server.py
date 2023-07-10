@@ -21,7 +21,9 @@ with app.app_context():
     
 @app.route('/')
 def home():
-    return render_template('index.html')   
+    all_books = db.session.execute(db.select(Book)).scalars().all()
+    print(all_books)
+    return render_template('index.html',books=all_books)
 
 
 @app.route("/add", methods=["GET", "POST"])

@@ -9,6 +9,18 @@ Library
 
 {% block content %}
 
-<h1>Welcome</h1>
+<h1>My Library</h1>
+        {% if books == []: %}
+        <p>Library is empty.</p>
+        {% endif %}
+    <ul>
+        {% for book in books %}
+        <li>
+            {{book.title}} - {{book.author}} - {{book.rating}}/10
+            
+        </li>
+        {% endfor %}
+    </ul>
+<a href="{{ url_for('add') }}">Add New Book</a>
 
 {% endblock %}
