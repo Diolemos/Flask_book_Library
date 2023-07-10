@@ -14,7 +14,7 @@ class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(250), unique=True, nullable=False)
     author = db.Column(db.String(250), nullable=False)
-    rating = db
+    rating = db.Column(db.Float, nullable=False)
     
 with app.app_context():
     db.create_all()
